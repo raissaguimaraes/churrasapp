@@ -23,7 +23,7 @@ const theme = createTheme({
 
 export function Layout({children}){
     return(
-        <Grid sx={{backgroundColor: "#FFD836", wrap: "wrap", width: '100%', height: "100vh"}}>
+        <Grid sx={{backgroundColor: "#FFD836", backgroundImage: 'url(/bbq_background.png)', backgroundRepeat: 'repeat-x', wrap: "wrap", width: '100%', height: "100vh"}}>
           <Head>
             <title>Agenda de Churras</title>
             <meta name="description" content="Churras App" />
