@@ -41,8 +41,8 @@ export function Layout({children}){
           <Typography fontSize="32px" fontWeight="800" sx={{ maxWidth: "298px", marginBottom: "48px", marginTop: "70px" }}>
             Agenda de Churras
           </Typography>
-            {children}
           </Box>
+            {children}
           </ThemeProvider>
         </Grid>
         </>
