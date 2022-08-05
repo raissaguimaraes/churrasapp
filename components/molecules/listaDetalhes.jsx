@@ -2,7 +2,7 @@ import { Grid, ListItemButton, ListItemIcon, Checkbox, ListItemText, Typography,
 import PeopleRounded from "@mui/icons-material/PeopleRounded";
 import PaidIcon from "@mui/icons-material/Paid";
 
-export default function ListaDetalhes(){
+export default function ListaDetalhes({data}){
     return(
         <Grid container xs={12} sx={{  width:"527px", marginRight:"36px", marginLeft: "24px", marginTop: "21px"}}>
             <Grid item xs={9}>
@@ -24,10 +24,12 @@ export default function ListaDetalhes(){
                 </Typography>
             </Grid>
            <Grid item xs={12}>
+           {data.map((participantes) => (
             <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="participantes"
                 name="radio-buttons-group"
+                key={participantes.id}
             >
                 <FormControlLabel value="participantes" 
                 control={
@@ -39,12 +41,15 @@ export default function ListaDetalhes(){
                 }} 
                 />
             } 
-                label="participantes"
+                label={participantes.name}
                 >
                 </FormControlLabel>
                 <Divider sx={{ opacity: "50%", border: "1px solid #E5C231" }} />
             </RadioGroup>
+           ))}
             </Grid>
         </Grid>
     )
 }
+
+  
